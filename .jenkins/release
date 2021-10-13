@@ -20,7 +20,7 @@ pipeline {
                 '''
             }
         }
-        stage('Change version form cargo.toml files') {
+        stage('Change version from cargo.toml files') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'jenkins-app-core', usernameVariable: 'GITHUB_APP', passwordVariable: 'GITHUB_TOKEN')]) {
                     sh '''
